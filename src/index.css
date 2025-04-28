@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: 79, 70, 229;
+  --color-primary-light: 129, 140, 248;
+  --color-secondary: 224, 89, 89;
+  --color-secondary-light: 247, 164, 164;
+  --color-accent: 245, 158, 11;
+  --color-success: 16, 185, 129;
+  --color-warning: 245, 158, 11;
+  --color-error: 239, 68, 68;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.7s ease-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.7s ease-out;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
